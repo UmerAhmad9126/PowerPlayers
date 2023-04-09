@@ -11,7 +11,7 @@ app.use(cors({ origin: "*" }));
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://frontend-one-eta-39.vercel.app",
     methods: ["GET", "POST"],
   },
 });
