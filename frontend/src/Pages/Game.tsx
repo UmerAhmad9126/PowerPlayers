@@ -7,7 +7,7 @@ type InputArray = Array<Array<InputValue>>;
 
 type AppProps = { numPlayers: number };
 
-export default function App({ numPlayers }: AppProps): JSX.Element {
+export default function Game({ numPlayers }: AppProps): JSX.Element {
   const arr: InputArray = Array.from({ length: 10 }, () => Array(10).fill({ value: "", disabled: false }));
   const [selectedInput, setSelectedInput] = useState<[number, number] | null>(null);
   const [inputArray, setInputArray] = useState<InputArray>(arr);
@@ -30,6 +30,7 @@ export default function App({ numPlayers }: AppProps): JSX.Element {
         setPlayerDisplayText("");
         break;
     }
+    
   }, [currentPlayer]);
 
   const handleClick = (itemIndex: number, index: number): void => {
