@@ -11,7 +11,9 @@ const CreateGame = () => {
 
             <div className="rounded-lg bg-slate-600 h-40 m-auto mt-20 pt-12 pb-8 w-6/12 bg-gray.600 flex gap-8 justify-center">
                 <input className='h-14 w-96 rounded-lg' type="text" placeholder='Enter your name' />
-                <button className='h-14 w-32 rounded-lg bg-cyan-500 hover:bg-cyan-600'>Confirm</button>
+                <Link to="/room">
+                    <button className='h-14 w-32 rounded-lg bg-cyan-500 hover:bg-cyan-600'>Confirm</button>
+                </Link>
             </div>
 
             <div className="m-auto mt-16 w-6/12">
