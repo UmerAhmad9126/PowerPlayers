@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MdOutlineContentCopy } from 'react-icons/md';
+import { Link } from "react-router-dom";
 
 
 const Room = () => {
@@ -57,7 +58,9 @@ const Room = () => {
         }
         <div className="flex place-content-center ">
           <button className="border-2 bg-yellow-500 p-2 rounded mr-5 shadow-2xl">◀️ Back</button>
-          <button onClick={handleStartGame} className="border-2 bg-green-500 p-2 rounded shadow-2xl">Start Battle 💀</button>
+          <Link to="/game">
+            <button onClick={handleStartGame} className="border-2 bg-green-500 p-2 rounded shadow-2xl">Start Battle 💀</button>
+          </Link>
         </div>
 
 
