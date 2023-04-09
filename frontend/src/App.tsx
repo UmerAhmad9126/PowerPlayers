@@ -1,3 +1,4 @@
+import AllRoutes from './AllRoutes/AllRoutes';
 import './App.css';
 import Game from './Pages/Game';
 
@@ -10,7 +11,11 @@ function App() {
   
   return (
     <div className="App">
-      <Game numPlayers={3} />
+
+  
+
+      <AllRoutes />
+
     </div>
   );
 }
