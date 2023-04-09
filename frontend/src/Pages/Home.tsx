@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import io from "socket.io-client";
-const socket = io("http://localhost:8080");
-const Home = () => {
+import { AllRoutesProps } from "../utils/types";
+
+const Home: React.FC<AllRoutesProps> = ({ socket }) => {
   useEffect(() => {
     socket.emit("hello", { message: "Hello from client" });
   }, []);
