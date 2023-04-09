@@ -1,6 +1,10 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import io from "socket.io-client";
+const socket = io("http://localhost:8080");
 const Home = () => {
+  useEffect(() => {
+    socket.emit("hello", { message: "Hello from client" });
+  }, []);
   return (
     <div>
       <div className="border border-sky-500 mt-60">
